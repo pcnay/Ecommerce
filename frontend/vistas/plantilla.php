@@ -2,7 +2,7 @@
 	<html lang="es">
 		<head>
 			<meta charset="UTF-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1.0, minimun-scale=1.0,maximum-scale=1.0, user-scalable=no">>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0, minimun-scale=1.0,maximum-scale=1.0, user-scalable=no">
 			<meta name="title" content="Tienda Virtual">
 			<meta name="descripcion" content="Curso Ecommerce">
 			<meta name="keyword" content = "Este curso es para aprender a realizar un Ecommerce Basico">
@@ -14,7 +14,11 @@
 
 		</head>
 		<body>
-			<h1>Titulo</h1>
+			<!-- CABEZOTE-->
+			<?php
+				include"modulos/cabezote.php";
+			?>
+
 		</body>
 	</html>
 	
