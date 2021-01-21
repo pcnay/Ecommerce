@@ -76,6 +76,7 @@
 			</div> <!-- <div class="col-lg-3 col-md-3 col-sm-2 col-xs-12" id="logotipo"> -->
 
 			<!-- Categorias y Buscador -->
+			<!-- Se dividen las 12 columnas que tiene asignado "Categorias"[4 Columnas-col-lg-4], "Buscador" [12 Columnas-col-lg-8] --> 
 			<div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
 				
 				<!-- Boton de Categorias -->
@@ -87,9 +88,100 @@
 					</p>
 				</div> <!-- <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 backColor" id="btnCategorias"> -->
 
+				<!-- Estos INPUT se obtienen de BootStrap, en la página de https://www.w3schools.com --> 
+				<div class="input-group col-lg-8 col-md-8 col-sm-8 col-xs-12" id="buscador">
+					<input type="search" name="buscar" class="form-control" placeholder="Buscar...">	
+						<span class="input-group-btn">
+							<a href="#">
+								<button class="btn btn-default backColor" type="submit">	
+								<i class="fa fa-search"></i>
+								</button>
+							</a>
+						</span>
+				</div><!-- <div class="input-group col-lg-8 col-md-8 col-sm-8 col-xs-12" id="buscador"> -->
+
 			</div> <!-- <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12"> -->
 
-		</div> <!-- <div class="row"> -->
+			<!-- Seccion de Carrito de Compras-->
+
+			<div class="col-lg-3 col-md-3 col-sm-2 col-xs-12" id="carrito">
+				<a href+"#">
+					<button class="btn btn-default pull-left backColor"> 							
+							<i class="fa fa-shopping-cart" aria-hidden="true"></i>						
+					</button>
+				</a>
+
+				<p>TU CESTA <span class="cantidadCesta">3</span> <br> USD $ <span class="sumaCesta">20</span></p>	
+
+			</div><!-- <div class="col-lg-3 col-md-3 col-sm-2 col-xs-12" id="carrito"> -->
+
+		</div> <!-- <div class="row"> id="cabezote"-->
+
+		<!-- Seccion de Categorias --> 
+		<!-- Se separan para manejar en los diferentes tipos de pantallas -->
+		<div class="col-xs-12 backColor" id="categorias">
+			<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
+				<h4>
+					<a href="#" class="pixelCategorias">Categorias 1</a>
+				</h4>
+				<hr>
+				<ul>					
+					<li><a href="#" class="pixelSubCategorias">Categoria 1</a></li>
+					<li><a href="#" class="pixelSubCategorias">Categoria 2</a></li>
+					<li><a href="#" class="pixelSubCategorias">Categoria 3</a></li>
+					<li><a href="#" class="pixelSubCategorias">Categoria 4</a></li>
+					<li><a href="#" class="pixelSubCategorias">Categoria 5</a></li>								
+				</ul>
+
+			</div><!-- <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12"> -->
+
+			<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
+				<h4>
+					<a href="#" class="pixelCategorias">Categorias 2</a>
+				</h4>
+				<hr>
+				<ul>					
+					<li><a href="#" class="pixelSubCategorias">Categoria 1</a></li>
+					<li><a href="#" class="pixelSubCategorias">Categoria 2</a></li>
+					<li><a href="#" class="pixelSubCategorias">Categoria 3</a></li>
+					<li><a href="#" class="pixelSubCategorias">Categoria 4</a></li>
+					<li><a href="#" class="pixelSubCategorias">Categoria 5</a></li>								
+				</ul>
+
+			</div><!-- <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12"> -->
+
+			<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
+				<h4>
+					<a href="#" class="pixelCategorias">Categorias 3</a>
+				</h4>
+				<hr>
+				<ul>					
+					<li><a href="#" class="pixelSubCategorias">Categoria 1</a></li>
+					<li><a href="#" class="pixelSubCategorias">Categoria 2</a></li>
+					<li><a href="#" class="pixelSubCategorias">Categoria 3</a></li>
+					<li><a href="#" class="pixelSubCategorias">Categoria 4</a></li>
+					<li><a href="#" class="pixelSubCategorias">Categoria 5</a></li>								
+				</ul>
+
+			</div><!-- <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12"> -->
+
+			<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
+				<h4>
+					<a href="#" class="pixelCategorias">Categorias 4</a>
+				</h4>
+				<hr>
+				<ul>					
+					<li><a href="#" class="pixelSubCategorias">Categoria 1</a></li>
+					<li><a href="#" class="pixelSubCategorias">Categoria 2</a></li>
+					<li><a href="#" class="pixelSubCategorias">Categoria 3</a></li>
+					<li><a href="#" class="pixelSubCategorias">Categoria 4</a></li>
+					<li><a href="#" class="pixelSubCategorias">Categoria 5</a></li>								
+				</ul>
+
+			</div><!-- <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12"> -->
+
+
+		</div><!-- <div class="col-xs-12 backColor" id="categorias"> -->
 
 	</div> <!-- <div class = "container"> -->
 
