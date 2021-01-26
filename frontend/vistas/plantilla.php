@@ -9,6 +9,17 @@
 			<title>Tienda Virtual</title>
 			<link rel="stylesheet" href="vistas/css/plugins/bootstrap.min.css">
 			<link rel="stylesheet" href="vistas/css/plugins/font-awesome.min.css">
+
+			<!-- Font Ubuntu : https://fonts.google.com/ -->
+			<link rel="preconnect" href="https://fonts.gstatic.com">
+			<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+			<link rel="preconnect" href="https://fonts.gstatic.com">
+			<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+
+			<link rel="stylesheet" href="vistas/css/plantilla.css">
+
+
 			<script src="vistas/js/plugins/jquery.min.js"></script>
 			<script src="vistas/js/plugins/bootstrap.min.js"></script>
 
