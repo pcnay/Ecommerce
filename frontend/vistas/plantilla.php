@@ -18,7 +18,7 @@
 			<link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
 
 			<link rel="stylesheet" href="vistas/css/plantilla.css">
-
+			<link rel="stylesheet" href="vistas/css/cabezote.css">				
 
 			<script src="vistas/js/plugins/jquery.min.js"></script>
 			<script src="vistas/js/plugins/bootstrap.min.js"></script>
@@ -27,6 +27,8 @@
 		<body>
 			<!-- CABEZOTE-->
 			<?php
+				
+				
 				include"modulos/cabezote.php";
 			?>
 
