@@ -23,4 +23,81 @@ TOP
 	font-size:12px;
 }
 
+/*=============================================
+HEADER
+=============================================*/
+/* Ajustando el logo*/
+header #logotipo img{
+	padding:20px 60px;
+	padding-left:0px;
+}
+
+/* Para bajar el recuadro de categorias */
+header #btnCategorias{
+	margin:20px 0;
+}
+header #btnCategorias p{
+	line-height:40px;
+	margin-bottom:0px;
+}
+/* Ajustar el icono de los libros */
+header #btnCategorias p span i{
+	line-height:40px;
+	margin-bottom:0px;
+	cursor: pointer; 
+}
+
+/* Margenes para el Buscador */
+header #buscador{
+	margin:20px 0;
+}
+
+/* Para que el cuadro de busqueda se iguale a de Categoria. */
+header #buscador input{
+	padding:19px;
+	border-radius:0;
+}
+/* Ajustar el cuadro de lupa */
+header #buscador button{
+	padding:12px;
+	border:1px solid silver;
+	border-radius:0;
+}
+
+/* Ajustando el carrito */
+header #carrito{
+	margin:20px 0;
+}
+/* Agrandando el boton */
+header #carrito button{
+	padding:12px 18px; 
+	border:1px solid silver;
+	border-radius:0;
+}
+/* Alargando el texto de Carrito, lado derecho */
+header #carrito p{
+	padding:2px;
+	padding-left:60px;
+	border:1px solid #aaa;
+	font-size:12px;
+}
+
+/* Ajustando las categorias */
+/* Subir un poco, formando columna por cada categoria. */
+header #categorias{
+	display:block; 
+	margin-top:-10px;
+	position: relative;
+	padding-bottom:20px;
+}
+/* Ajustando margenes de las h4 */
+header #categorias h4{
+	margin-top:20px;
+	margin-bottom:-10px;
+}
+/* La linea de los encabezados de categorias (h4) */
+header #categorias hr{
+	border:1px solid rgba(255,255,255,.3);
+}
+
 
