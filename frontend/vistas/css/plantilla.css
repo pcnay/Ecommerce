@@ -132,9 +132,8 @@ ERROR 404
 /*=============================================
 ESCRITORIO GRANDE (LG revisamos en 1366px en adelante)
 =============================================*/
-
 @media (min-width:1200px){
-
+	/* Se crea la clase para escoger cajas */
 	.col-lg-0{
 		display: none;
 	}
@@ -151,7 +150,7 @@ ESCRITORIO MEDIANO O TABLET HORIZONTAL (MD revisamos en 1024px)
 =============================================*/
 
 @media (max-width:1199px) and (min-width:992px){
-
+	/* Se crea la clase para escoger cajas */
 	.col-md-0{
 		display: none;
 	}
@@ -168,7 +167,7 @@ ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
 =============================================*/
 
 @media (max-width:991px) and (min-width:768px){
-
+	/* Se crea la clase para escoger cajas */
 	.col-sm-0{
 		display: none;
 	}
@@ -185,7 +184,7 @@ MOVIL (XS revisamos en 320px)
 =============================================*/
 
 @media (max-width:767px){
-
+	/* Se crea la clase para escoger cajas */	
 	.col-xs-0{
 		display: none;
 	}

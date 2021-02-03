@@ -26,11 +26,6 @@ TOP
 /*=============================================
 HEADER
 =============================================*/
-/* Ajustando el logo*/
-header #logotipo img{
-	padding:20px 60px;
-	padding-left:0px;
-}
 
 /* Para bajar el recuadro de categorias */
 header #btnCategorias{
@@ -101,3 +96,58 @@ header #categorias hr{
 }
 
 
+/* Ajustando el Header con sus logos, textos a los diferentes tamaños. */
+/*=============================================
+ESCRITORIO GRANDE (LG revisamos en 1366px en adelante)
+=============================================*/
+@media (min-width:1200px)
+{
+	/* Ajustando el logo*/
+	header #logotipo img{
+	padding:20px 60px;
+	padding-left:0px;
+	}
+	/* Reduciendo un poco la imagen de Carrito de Compras, se hace para la izquierda.	 */
+	header #carrito{
+			padding-left:100px;
+	}
+}
+
+/*=============================================
+ESCRITORIO MEDIANO O TABLET HORIZONTAL (MD revisamos en 1024px)
+=============================================*/
+
+@media (max-width:1199px) and (min-width:992px)
+{
+	/* Ajustando el logo, se ajusta estos dos con adicional "left" para no utilizar los cuatro valores.*/
+	header #logotipo img{
+	padding:25px 60px;
+	padding-left:0px;	
+	}
+}
+
+/*=============================================
+ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
+=============================================*/
+
+@media (max-width:991px) and (min-width:768px)
+{
+	/* Ajustando el logo*/
+	header #logotipo img{
+	padding:30px 0px;
+	}
+}
+
+
+/*=============================================
+MOVIL (XS revisamos en 320px)
+=============================================*/
+
+@media (max-width:767px)
+{
+	/* Ajustando el logo*/
+	header #logotipo img{
+	padding:30px;
+	padding-bottom:20px;
+	}
+}
