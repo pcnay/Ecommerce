@@ -80,7 +80,7 @@ header #carrito p{
 /* Ajustando las categorias */
 /* Subir un poco, formando columna por cada categoria. */
 header #categorias{
-	display:block; 
+	display:none; /* De "block" se cambia a "none" para que se oculte cuando se active la pantalla. */
 	margin-top:-10px;
 	position: relative;
 	padding-bottom:20px;
