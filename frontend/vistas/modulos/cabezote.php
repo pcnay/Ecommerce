@@ -9,7 +9,11 @@
 			-->
 			<div class = "col-lg-9 col-md-9 col-sm-8 col-xs-12 social">
 				<ul>
-		
+					<?php
+						$social = ControladorPlantilla::ctrEstiloPlantilla();
+						var_dump($social);
+						
+					?>		
 					<li>
 						<a href="http://facebook.com/" target="_blank">
 							<!-- Se utiliza fontaweson para los iconos de la redes sociales --> 
