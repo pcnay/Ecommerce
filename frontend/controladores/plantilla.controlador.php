@@ -10,6 +10,7 @@
 		// Estilos dinamicos de la plantilla
 		public function ctrEstiloPlantilla()
 		{
+			// Manejando por capas
 			$tabla = "t_Plantilla";
 			$respuesta = ModeloPlantilla::mdlEstiloPlantilla($tabla);
 			return $respuesta;

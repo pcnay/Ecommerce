@@ -11,39 +11,32 @@
 				<ul>
 					<?php
 						$social = ControladorPlantilla::ctrEstiloPlantilla();
-						var_dump($social);
-						
-					?>		
-					<li>
-						<a href="http://facebook.com/" target="_blank">
-							<!-- Se utiliza fontaweson para los iconos de la redes sociales --> 
-							<i class="fa fa-facebook redSocial facebookBlanco" aria-hidden="true"></i>
-						</a>
-					</li>
+						//var_dump($social);
+						// Como se obtiene en forma de JSon, se tiene que decodificar. Ya que esta grabado entre Corchetes, parentesis Lo convierte en Arreglo.
+						// var_dump(json_decode($social["redesSociales"],true));
+						$jsonRedesSociales = json_decode($social["redesSociales"],true);
 
-					<li>
+						//Se recorre los indices para tomar las propiedades.
+						foreach ($jsonRedesSociales as $key => $value)
+						{
+							//var_dump($value["red"]);
+							//var_dump($value["url"]);
+							//Desplegando el contenido desde la base de datos.
+							echo '<li>
+								<a href="'.$value["url"].'" target="_blank">
+									<!-- Se utiliza fontaweson para los iconos de la redes sociales --> 
+									<i class="fa '.$value["red"].' redSocial '.$value["estilo"].'" aria-hidden="true"></i>
+								</a>
+							</li>';
+						}
+					?>		
+					<!--<li>
 						<a href="http://youtube.com/" target="_blank">
 							<i class="fa fa-youtube redSocial youtubeBlanco" aria-hidden="true"></i>
 						</a>
 					</li>
+					-->
 
-					<li>
-						<a href="http://twitter.com/" target="_blank">
-							<i class="fa fa-twitter redSocial twitterBlanco" aria-hidden="true"></i>
-						</a>
-					</li>
-
-					<li>
-						<a href="http://google.com/" target="_blank">
-							<i class="fa fa-google-plus redSocial googleBlanco" aria-hidden="true"></i>
-						</a>
-					</li>
-
-					<li>
-						<a href="http://instagram.com/" target="_blank">
-							<i class="fa fa-instagram redSocial instagramBlanco" aria-hidden="true"></i>
-						</a>
-					</li>
 
 				</ul>
 
@@ -75,7 +68,7 @@
 			<!-- LOGOTIPO-->
 			<div class="col-lg-3 col-md-3 col-sm-2 col-xs-12" id="logotipo">				
 				<a href="#">						
-					<img src="http://162.0.238.251/ecommerce/backend/vistas/img/plantilla/logo.png" class="img-responsive">
+					<img src="https://www.miportalweb.org/ecommerce/backend/vistas/img/plantilla/logo.png" class="img-responsive">
 				</a>				
 			</div> <!-- <div class="col-lg-3 col-md-3 col-sm-2 col-xs-12" id="logotipo"> -->
 
