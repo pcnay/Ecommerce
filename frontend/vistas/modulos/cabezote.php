@@ -68,7 +68,7 @@
 			<!-- LOGOTIPO-->
 			<div class="col-lg-3 col-md-3 col-sm-2 col-xs-12" id="logotipo">				
 				<a href="#">						
-					<img src="https://www.miportalweb.org/ecommerce/backend/vistas/img/plantilla/logo.png" class="img-responsive">
+					<img src="https://www.miportalweb.org/ecommerce/backend/<?php echo $social["logo"]; ?>" class="img-responsive">
 				</a>				
 			</div> <!-- <div class="col-lg-3 col-md-3 col-sm-2 col-xs-12" id="logotipo"> -->
 

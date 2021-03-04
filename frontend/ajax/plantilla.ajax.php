@@ -9,7 +9,10 @@
 		public function ajaxEstiloPlantilla()
 		{
 			$respuesta = ControladorPlantilla::ctrEstiloPlantilla();
-			var_dump($respuesta);
+			// var_dump($respuesta);
+			// Se tiene que pasar de un objeto arreglo aun String.
+			echo json_encode($respuesta);
+
 
 		}
 	}
