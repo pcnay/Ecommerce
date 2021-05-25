@@ -7,8 +7,13 @@
 			<meta name="descripcion" content="Curso Ecommerce">
 			<meta name="keyword" content = "Este curso es para aprender a realizar un Ecommerce Basico">
 			<title>Tienda Virtual</title>
-			<!-- Para colocar el icono en la pestana de la aplicacion -->
-			<link rel="icon" href="https://www.miportalweb.org/ecommerce/backend/vistas/img/plantilla/icono.png">
+			<?php
+				$icono = ControladorPlantilla::ctrEstiloPlantilla();
+				echo '	<link rel="icon" href="https://www.miportalweb.org/ecommerce/backend/'.$icono["icono"].'">';
+			?>
+
+			<!-- Para colocar el icono en la pestana de la aplicacion 
+			<link rel="icon" href="https://www.miportalweb.org/ecommerce/backend/vistas/img/plantilla/icono.png"> -->
 
 			<link rel="stylesheet" href="vistas/css/plugins/bootstrap.min.css">
 			<link rel="stylesheet" href="vistas/css/plugins/font-awesome.min.css">

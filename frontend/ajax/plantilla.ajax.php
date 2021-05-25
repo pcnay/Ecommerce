@@ -9,13 +9,15 @@
 		public function ajaxEstiloPlantilla()
 		{
 			$respuesta = ControladorPlantilla::ctrEstiloPlantilla();
-			// var_dump($respuesta);
+			// El contenido de este arreglo es mostrado en la parte de "Console" del navegador.
+			//var_dump($respuesta);
+			
 			// Se tiene que pasar de un objeto arreglo aun String.
+			// Se utiliza "echo" para mandarlo al Ajax, desde donde se llamo (plantilla.js)
 			echo json_encode($respuesta);
-
-
 		}
-	}
+
+	} // class AjaxPlantilla
 	
 	// Instanciando la clase
 	$objeto = new AjaxPlantilla();
