@@ -7,7 +7,7 @@ $.ajax({
 		//console.log(respuesta);
 		
 		// Para convertirlo a un formato de String a Objeto de Datos JSon.
-		console.log(JSON.parse(respuesta));
+		//console.log(JSON.parse(respuesta));
 		// El objeto se estructura de manera que las campos de la tabla es el acceso al cotenido del campo es decir "Clave => Valor "
 		
 		// Obtiene el valor del campo "colorFondo".
