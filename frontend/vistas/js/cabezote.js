@@ -1,7 +1,6 @@
 /*=============================================
 CABEZOTE
 =============================================*/
-
 $("#btnCategorias").click(function(){
 
 	// Punto de Quiebre, desde JavaScript

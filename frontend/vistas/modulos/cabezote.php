@@ -116,67 +116,39 @@
 
 		<!-- Seccion de Categorias --> 
 		<!-- Se separan para manejar en los diferentes tipos de pantallas -->
+		<!-- Estan agregadas de forma manual, pero se manejara de forma dinamica -->
+		
+		<!-- Forma Dinamica --> 
+		
 		<div class="col-xs-12 backColor" id="categorias">
-			<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
-				<h4>
-					<a href="#" class="pixelCategorias">Categorias 1</a>
-				</h4>
-				<hr>
-				<ul>					
-					<li><a href="#" class="pixelSubCategorias">Categoria 1</a></li>
-					<li><a href="#" class="pixelSubCategorias">Categoria 2</a></li>
-					<li><a href="#" class="pixelSubCategorias">Categoria 3</a></li>
-					<li><a href="#" class="pixelSubCategorias">Categoria 4</a></li>
-					<li><a href="#" class="pixelSubCategorias">Categoria 5</a></li>								
-				</ul>
+			<?php
+				$categorias = ControladorProductos::ctrMostrarCategorias();
+				// Se utiliza el"for each", porque retorna varios registros se utiliza el "fetchAll"				
+				//var_dump($categorias);
+				foreach ($categorias as $key => $value)
+				{
+					//var_dump($value["categoria"]);
+					// Mostrando las categorias de forma dinámica 
+					echo '
+						<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
+							<h4>
+								<!-- Con las URL amigables se evita : <a href=index.php?ruta=$value["ruta"], solo se deja : <a href="'.$value["ruta"].' -->
+								<a href="'.$value["ruta"].'" class="pixelCategorias">'.$value["categoria"].'</a>
+							</h4>
+							<hr>
+							<ul>';
+								$subcategorias = ControladorProductos::ctrMostrarSubCategorias($value["id_categoria"]);
+								//var_dump($subcategorias);
+								foreach ($subcategorias as $key => $value)
+								{
+									echo '<li><a href="'.$value["ruta"].'" class="pixelSubCategorias">'.$value["subcategoria"].'</a></li>';	
+								}
+							echo '</ul>	
 
-			</div><!-- <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12"> -->
+						</div><!-- <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12"> -->';
+				}
 
-			<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
-				<h4>
-					<a href="#" class="pixelCategorias">Categorias 2</a>
-				</h4>
-				<hr>
-				<ul>					
-					<li><a href="#" class="pixelSubCategorias">Categoria 1</a></li>
-					<li><a href="#" class="pixelSubCategorias">Categoria 2</a></li>
-					<li><a href="#" class="pixelSubCategorias">Categoria 3</a></li>
-					<li><a href="#" class="pixelSubCategorias">Categoria 4</a></li>
-					<li><a href="#" class="pixelSubCategorias">Categoria 5</a></li>								
-				</ul>
-
-			</div><!-- <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12"> -->
-
-			<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
-				<h4>
-					<a href="#" class="pixelCategorias">Categorias 3</a>
-				</h4>
-				<hr>
-				<ul>					
-					<li><a href="#" class="pixelSubCategorias">Categoria 1</a></li>
-					<li><a href="#" class="pixelSubCategorias">Categoria 2</a></li>
-					<li><a href="#" class="pixelSubCategorias">Categoria 3</a></li>
-					<li><a href="#" class="pixelSubCategorias">Categoria 4</a></li>
-					<li><a href="#" class="pixelSubCategorias">Categoria 5</a></li>								
-				</ul>
-
-			</div><!-- <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12"> -->
-
-			<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
-				<h4>
-					<a href="#" class="pixelCategorias">Categorias 4</a>
-				</h4>
-				<hr>
-				<ul>					
-					<li><a href="#" class="pixelSubCategorias">Categoria 1</a></li>
-					<li><a href="#" class="pixelSubCategorias">Categoria 2</a></li>
-					<li><a href="#" class="pixelSubCategorias">Categoria 3</a></li>
-					<li><a href="#" class="pixelSubCategorias">Categoria 4</a></li>
-					<li><a href="#" class="pixelSubCategorias">Categoria 5</a></li>								
-				</ul>
-
-			</div><!-- <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12"> -->
-
+			?>
 
 		</div><!-- <div class="col-xs-12 backColor" id="categorias"> -->
 

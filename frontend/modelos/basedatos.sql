@@ -10,7 +10,7 @@
 --    source script.sql ó \. script.sql
 		
 			Borrar tabla: DROP TABLE <nombre Tabla>
-			
+			Borrar Base de Datos: DROP DATABASE nombre-baseDatos			
 */
 
 /* 
@@ -61,7 +61,7 @@ GRANT ALL on bd_ecommerce.* to 'usuario_ecommerce'  IDENTIFIED BY 'ecommerce-202
 
 CREATE TABLE t_Plantilla
 (
-  id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+  id_plantilla SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
   barraSuperior VARCHAR(100) NULL,
 	textoSuperior VARCHAR(100) NULL,
 	logo VARCHAR(100) NULL,
@@ -75,8 +75,8 @@ CREATE TABLE t_Plantilla
 CREATE TABLE t_Categoria
 (
   id_categoria SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-  categoria TEXT NULL,
-	ruta TEXT NULL,
+  categoria VARCHAR(50) NULL,
+	ruta VARCHAR(50) NULL,
   fecha DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -84,9 +84,9 @@ CREATE TABLE t_Subcategoria
 (
   id_subcategoria SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 	id_categoria SMALLINT UNSIGNED NOT NULL,
-  subcategoria TEXT NULL,
-	ruta TEXT NULL,
+  subcategoria VARCHAR(100) NULL,
+	ruta VARCHAR(50) NULL,
   fecha DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	FOREIGN KEY(id_categoria) REFERENCES t_Categoria(id_categoria)
-	ON DELETE RESTRICT ON UPDATE CASCADE,
+	ON DELETE RESTRICT ON UPDATE CASCADE
 );

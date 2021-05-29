@@ -1,0 +1,20 @@
+# Impedir que no se pueda ver el listado del contenidos de un directorio.
+Options All -Indexes
+# URL amigables, no las muestra la ruta completa en la barra de direcciones, index=valor?,,,,
+
+
+#Permita letras y numeros
+# Cuando se este enviando a traves de la ruta "index.php" con variable GET "ruta" que se convierta en una 
+# URL amigable, expresion regular "^()$" a utilizar ^([-a-zA-Z0-9]+)$ 
+#$1 = Convierte cualquier valor que traiga "ruta y la convierta en una URL amigable, es decir $1 = index.php?ruta
+
+RewriteEngine On 
+RewriteRule ^([-a-zA-Z0-9/_]+)$ index.php?ruta=$1
+
+#Muestra una ventana para ingresar una clave
+# Impedir que no se pueda ver el listado del contenidos de un directorio.
+#Options All -Indexes
+#AuthType Basic
+#AuthName "Restricted Access"
+#AuthUserFile /home/access_web/webpass
+#Require user WebaccesS

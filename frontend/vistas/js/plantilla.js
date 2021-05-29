@@ -1,4 +1,3 @@
-
 // PLANTILLA
 // Se utiliza Ajax para comunicarse a la Base De Datos MySql desde JavaScript
 $.ajax({
@@ -24,9 +23,8 @@ $.ajax({
 
 		// Aplicando el estilo a las clases definidas en la etiquetas
 		// Se utiliza TQuery para aplicar los estilos.		
-		$(".backColor, .backColor a").css({"background": colorFondo,"color": colorTexto})
-
-		$(".barraSuperior, .barraSuperior a").css({"background": barraSuperior,"color": textoSuperior})
+		$(".backColor, .backColor a").css({"background": colorFondo,"color": colorTexto});
+		$(".barraSuperior, .barraSuperior a").css({"background": barraSuperior,"color": textoSuperior});
 		
 	}
 

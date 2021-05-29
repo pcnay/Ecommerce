@@ -1,6 +1,0 @@
-Options All -Indexes
-
-AuthType Basic
-AuthName "Restricted Access"
-AuthUserFile /home/access_web/webpass
-Require user WebaccesS
