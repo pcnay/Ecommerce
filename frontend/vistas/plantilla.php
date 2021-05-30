@@ -46,6 +46,7 @@
 			<?php
 				include"modulos/cabezote.php";
 				$rutas = array();
+				$ruta = null;
 				// Donde se agrega las rutas (lista blanca) de las paginas a mostrar.
 				// Determina si existe la variable Global "$_GET"
 				
@@ -53,16 +54,53 @@
 
 				if (isset($_GET["ruta"]))
 				{ 
-					//Separa el contenido del la URL en indexes de un arreglo, el separador es "/". 
+					
+					//Separa el contenido del la URL en indexes de un arreglo, el separador es "/". 					
 					$rutas = explode("/",$_GET["ruta"]);
-					var_dump($rutas);
-					//print_r("IMPRIMIR RUTAS".$direcc);
-				}
-				else
-				{
-					//print_r("No existe la Variable Global -lugar ");
-				}
+					// var_dump($rutas);
+					//  Contiene la ruta real : bolso/valor1/valor2/valor3
+					// $rutas[0] = bolso, 
+					
+					
+					//var_dump($rutas[0]);
+					$item = "ruta";
+					$valorRuta = $rutas[0];
+					//var_dump($valorRuta);
+					$rutaCategorias = ControladorProductos::ctrMostrarCategorias($item,$valorRuta);
+				
+					//var_dump($rutaCategorias["ruta"]);
 
+					// URL lista blanca de Categorias
+					if ($valorRuta == $rutaCategorias["ruta"])
+					{
+						$ruta = $valorRuta;						
+					}
+
+					// URL amigables de Subcategorias.
+					$item = "ruta";
+					$valorRuta = $rutas[0];
+					$rutaSubCategorias = ControladorProductos::ctrMostrarSubCategorias($item,$valorRuta);
+					// var_dump ($rutaSubCategorias);
+					// Como devuelve un arreglo aun sea un solo elmento, ya que se retorno en el modelo como "fetchAll"
+					foreach ($rutaSubCategorias as $key => $value)
+					{
+						if ($valorRuta == $value["ruta"])
+						{
+							$ruta = $valorRuta;						
+						}	
+					}
+
+					if ($ruta != null)
+					{
+						include "modulos/productos.php";					
+					}
+					else
+					{
+						include "modulos/error404.php";
+					
+					}
+				}
+				
 			?>
 			<script src="<?php echo $url; ?>vistas/js/cabezote.js"></script>
 			<script src="<?php echo $url; ?>vistas/js/plantilla.js"></script>

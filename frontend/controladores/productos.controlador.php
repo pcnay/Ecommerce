@@ -1,20 +1,20 @@
 <?php
 	class ControladorProductos
 	{
-		public function ctrMostrarCategorias()
+		// "Static" porque se envia parámetro.
+		static public function ctrMostrarCategorias($item,$valor)
 		{
 			$tabla = "t_Categoria";
-			$respuesta = ModeloProductos::mdlMostrarCategorias($tabla);
+			$respuesta = ModeloProductos::mdlMostrarCategorias($tabla,$item,$valor);
 
 			return $respuesta;
 		}
 
 		// "Static" porque se envia parámetro.
-		static public function ctrMostrarSubCategorias($id_categoria)
+		static public function ctrMostrarSubCategorias($item,$valor)
 		{
 			$tabla = "t_Subcategoria";
-			$respuesta = ModeloProductos::mdlMostrarSubCategorias($tabla,$id_categoria);
-
+			$respuesta = ModeloProductos::mdlMostrarSubCategorias($tabla,$item,$valor);
 			return $respuesta;
 		}
 

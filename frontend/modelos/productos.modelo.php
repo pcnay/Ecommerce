@@ -4,23 +4,39 @@
 	class ModeloProductos
 	{
 		// Se declara estatico porque se le envian parámetros.
-		static public function mdlMostrarCategorias($tabla)
+		static public function mdlMostrarCategorias($tabla,$item,$valor)
 		{
-			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
-			$stmt->execute();
-			$registros = $stmt->fetchAll();
+			if ($item != null)
+			{
+				// Se realiza para que sea generico el campoa buscar.
+				$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item");
+				$stmt->bindParam(":".$item,$valor,PDO::PARAM_STR);
+				$stmt->execute();
+				// Retorna un solo registro.
+				$registros = $stmt->fetch();			
+				// Cerrar la conexion de la instancia de la base de datos.
+				$stmt->closeCursor();
+				$stmt=null;
+				return $registros;
+			}
+			else
+			{
+				$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+				$stmt->execute();
+				$registros = $stmt->fetchAll();
+				// Cerrar la conexion de la instancia de la base de datos.
+				$stmt->closeCursor();
+				$stmt=null;
+				return $registros;
+			}
 
-			// Cerrar la conexion de la instancia de la base de datos.
-			$stmt->closeCursor();
-			$stmt=null;
-			return $registros;
 		}
 
 		// Se declara estatico porque se le envian parámetros.
-		static public function mdlMostrarSubCategorias($tabla,$id_categoria)
+		static public function mdlMostrarSubCategorias($tabla,$item,$valor)
 		{
-			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE id_categoria = :id_categoria ");
-			$stmt->bindParam(":id_categoria",$id_categoria,PDO::PARAM_INT);
+			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item");
+			$stmt->bindParam(":".$item,$valor,PDO::PARAM_STR);
 			$stmt->execute();
 			$registros = $stmt->fetchAll();
 

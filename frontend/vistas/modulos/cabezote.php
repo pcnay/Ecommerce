@@ -122,7 +122,9 @@
 		
 		<div class="col-xs-12 backColor" id="categorias">
 			<?php
-				$categorias = ControladorProductos::ctrMostrarCategorias();
+				$item = null;
+				$valor = null;
+				$categorias = ControladorProductos::ctrMostrarCategorias($item,$valor);
 				// Se utiliza el"for each", porque retorna varios registros se utiliza el "fetchAll"				
 				//var_dump($categorias);
 				foreach ($categorias as $key => $value)
@@ -137,7 +139,11 @@
 							</h4>
 							<hr>
 							<ul>';
-								$subcategorias = ControladorProductos::ctrMostrarSubCategorias($value["id_categoria"]);
+								
+								$item = "id_categoria";
+								$valor = $value["id_categoria"];
+
+								$subcategorias = ControladorProductos::ctrMostrarSubCategorias($item,$valor);
 								//var_dump($subcategorias);
 								foreach ($subcategorias as $key => $value)
 								{
